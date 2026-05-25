@@ -1,8 +1,8 @@
-# Magic Cursor — Open Source
+# Magic Cursor - Open Source
 
-> Shake your mouse → instant AI overlay. Bring your own keys.
+> Shake your mouse -> instant AI overlay. Bring your own keys.
 
-Magic Cursor is a lightweight desktop utility for Windows and macOS that detects a mouse shake gesture and instantly opens an AI assistant overlay — no shortcut to remember, no click, just a shake.
+Magic Cursor is a lightweight desktop utility for Windows and macOS that detects a mouse shake gesture and instantly opens an AI assistant overlay -- no shortcut to remember, no click, just a shake.
 
 This is the **open-source BYOK edition**. Connect your own Ollama instance, OpenAI key, Groq key, or any OpenAI-compatible API. Full source code, no subscriptions.
 
@@ -10,32 +10,32 @@ This is the **open-source BYOK edition**. Connect your own Ollama instance, Open
 
 ## Features
 
-- **Mouse shake trigger** — wiggle your cursor to summon the overlay (sensitivity adjustable)
-- **Ask mode** — type a question, get a streaming response with the content under your cursor as context
-- **Bubble mode** — compact floating response that stays out of the way
-- **Chip mode** — minimal chip-style answer for quick lookups
-- **Screen context** — automatically captures selected text, window title, and an optional screenshot
-- **Session history** — browse past queries in a side panel
-- **Insert / Copy** — paste the AI response directly into the focused window
-- **Clean response extraction** — strip explanatory preamble before inserting
-- **Windows + macOS** — native builds for both platforms
+- **Mouse shake trigger** -- wiggle your cursor to summon the overlay (sensitivity adjustable)
+- **Ask mode** -- type a question, get a streaming response with the content under your cursor as context
+- **Bubble mode** -- compact floating response that stays out of the way
+- **Chip mode** -- minimal chip-style answer for quick lookups
+- **Screen context** -- automatically captures selected text, window title, and an optional screenshot
+- **Session history** -- browse past queries in a side panel
+- **Insert / Copy** -- paste the AI response directly into the focused window
+- **Clean response extraction** -- strip explanatory preamble before inserting
+- **Windows + macOS** -- native builds for both platforms
 
 ---
 
 ## Setup
 
-### Option A — Download installer
+### Option A -- Download installer
 
-1. Go to the [Releases](https://github.com/magic-cursor-oss/magic-cursor/releases) page
+1. Go to the [Releases](https://github.com/shoumikgoswami/magic_cursor_sso/releases) page
 2. Download the installer for your platform:
-   - **Windows** → `.msi` installer
-   - **macOS** → `.dmg` disk image
+   - **Windows** -> `.msi` installer
+   - **macOS** -> `.dmg` disk image
 3. Install and launch **Magic Cursor**
-4. The tray icon appears — click it and open **Settings**
+4. The tray icon appears -- click it and open **Settings**
 5. Choose your provider and paste your API key (or set Ollama URL)
 6. Shake your mouse to start
 
-### Option B — Build from source
+### Option B -- Build from source
 
 **Prerequisites:**
 - [Rust](https://rustup.rs/) (stable)
@@ -43,8 +43,8 @@ This is the **open-source BYOK edition**. Connect your own Ollama instance, Open
 - [Tauri CLI](https://tauri.app/start/create-project/#using-cargo-create-tauri-app): `cargo install tauri-cli`
 
 ```bash
-git clone https://github.com/magic-cursor-oss/magic-cursor.git
-cd magic-cursor
+git clone https://github.com/shoumikgoswami/magic_cursor_sso.git
+cd magic_cursor_sso
 npm install
 cargo tauri build
 ```
@@ -100,13 +100,13 @@ Key settings:
 
 ## Want zero-setup?
 
-**Magic Cursor Managed** — download, paste a license key, done. Includes:
-- ✓ Best available models via OpenRouter (no API key juggling)
-- ✓ Voice input — speak your question, Whisper transcribes it
-- ✓ Act mode — agentic tools: run shell commands, control the UI, read/write files
-- ✓ One subscription, no API billing surprises
+**Magic Cursor Managed** -- download, paste a license key, done. Includes:
+- Best available models via OpenRouter (no API key juggling)
+- Voice input -- speak your question, Whisper transcribes it
+- Act mode -- agentic tools: run shell commands, control the UI, read/write files
+- One subscription, no API billing surprises
 
-→ **[magiccursor.app](https://magiccursor.app)** — $9/month
+**[magiccursor.app](https://magiccursor.app)** -- $9/month
 
 ---
 
@@ -114,21 +114,21 @@ Key settings:
 
 ```
 src-tauri/src/
-  main.rs           — Tauri commands, tray icon setup
-  config.rs         — AppConfig serde, load/save JSON
-  providers.rs      — Multi-provider LLM client (Ollama, OpenAI, Groq)
-  context.rs        — Screen context capture (screenshot, clipboard, window title)
-  mouse_hook.rs     — Global mouse hook via rdev
-  shake_detector.rs — Direction-reversal shake algorithm
-  window_manager.rs — Overlay show/hide/resize helpers
-  entity.rs         — Smart entity detection in selected text
-  history.rs        — Session history persistence
+  main.rs           -- Tauri commands, tray icon setup
+  config.rs         -- AppConfig serde, load/save JSON
+  providers.rs      -- Multi-provider LLM client (Ollama, OpenAI, Groq)
+  context.rs        -- Screen context capture (screenshot, clipboard, window title)
+  mouse_hook.rs     -- Global mouse hook via rdev
+  shake_detector.rs -- Direction-reversal shake algorithm
+  window_manager.rs -- Overlay show/hide/resize helpers
+  entity.rs         -- Smart entity detection in selected text
+  history.rs        -- Session history persistence
 
 src/
-  components/Overlay.tsx       — Main overlay UI (Ask / Bubble / Chip modes)
-  components/Settings.tsx      — Settings window
-  components/ResponseStream.tsx — Streaming token renderer
-  store/overlayStore.ts        — Zustand state for overlay
+  components/Overlay.tsx        -- Main overlay UI (Ask / Bubble / Chip modes)
+  components/Settings.tsx       -- Settings window
+  components/ResponseStream.tsx -- Streaming token renderer
+  store/overlayStore.ts         -- Zustand state for overlay
 ```
 
 ---
@@ -137,7 +137,7 @@ src/
 
 Pull requests welcome. For significant changes please open an issue first to discuss the approach.
 
-- Keep the core feature set minimal — this is the BYOK edition
+- Keep the core feature set minimal -- this is the BYOK edition
 - Rust code: `cargo fmt` + `cargo clippy` before submitting
 - TypeScript: `npx tsc --noEmit` must pass
 
