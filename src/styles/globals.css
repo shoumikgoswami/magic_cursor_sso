@@ -1,0 +1,99 @@
+/* ═══════════════════════════════════════════════════════════
+   Magic Cursor — Design System (from landing page)
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Surfaces ── */
+  --bg:        oklch(0.135 0.012 250);
+  --bg-2:      oklch(0.17  0.013 250);
+  --surface:   oklch(0.195 0.014 250);
+  --surface-2: oklch(0.225 0.015 250);
+  --bg-glass:  oklch(0.135 0.012 250 / 0.92);
+
+  /* ── Foreground ── */
+  --fg:        oklch(0.975 0.006 250);
+  --fg-muted:  oklch(0.68  0.013 250);
+  --fg-dim:    oklch(0.48  0.012 250);
+  --fg-primary:   var(--fg);
+  --fg-secondary: var(--fg-muted);
+
+  /* ── Accent (hue 205 = sky/cyan) ── */
+  --accent-h:  205;
+  --accent:    oklch(0.82 0.155 var(--accent-h));
+  --accent-2:  oklch(0.72 0.180 var(--accent-h));
+  --accent-dim:   oklch(0.65 0.12 var(--accent-h));
+  --accent-soft:  oklch(0.82 0.155 var(--accent-h) / 0.18);
+  --accent-glow:  oklch(0.82 0.155 var(--accent-h) / 0.35);
+  --accent-glow2: oklch(0.72 0.180 var(--accent-h) / 0.25);
+
+  /* ── Semantic ── */
+  --warn:   oklch(0.82 0.16  85);
+  --danger: oklch(0.72 0.20  25);
+  --ok:     oklch(0.80 0.17 150);
+
+  /* ── Borders ── */
+  --border:    oklch(0.30  0.018 250);
+  --border-2:  oklch(0.40  0.020 250);
+  --border-focus: oklch(0.82 0.155 var(--accent-h) / 0.50);
+  --border-inner: oklch(1 0 0 / 0.05);
+
+  /* ── Context strip (legacy compat) ── */
+  --ctx-bg: oklch(0.82 0.155 var(--accent-h) / 0.10);
+  --ctx-fg: var(--accent);
+
+  /* ── Typography ── */
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body:    "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+
+  /* ── Radius ── */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: transparent;
+  overflow: hidden;
+  font-family: var(--font-body);
+  font-feature-settings: "ss01", "ss02", "cv11";
+  font-size: 14px;
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+}
+
+/* ── Global animations ───────────────────────────────────── */
+@keyframes micPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.35; }
+}
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--border-2);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fg-dim);
+}

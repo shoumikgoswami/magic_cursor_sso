@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <!-- Allow AppleScript automation (osascript) for reading window titles,
+       browser URLs, and Finder paths without per-call permission dialogs. -->
+  <key>com.apple.security.automation.apple-events</key>
+  <true/>
+
+  <!-- Allow microphone access for Whisper speech-to-text recording. -->
+  <key>com.apple.security.device.microphone</key>
+  <true/>
+</dict>
+</plist>
