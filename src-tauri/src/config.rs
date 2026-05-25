@@ -119,7 +119,7 @@ pub fn config_dir() -> std::path::PathBuf {
     let base = dirs::config_dir()
         .or_else(|| dirs::data_dir())
         .unwrap_or_else(|| PathBuf::from("."));
-    base.join("ai-cursor")
+    base.join("magic-cursor")
 }
 
 fn config_path() -> PathBuf {

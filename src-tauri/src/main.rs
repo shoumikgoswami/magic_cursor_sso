@@ -242,7 +242,7 @@ fn main() {
 
             let settings_item = MenuItemBuilder::new("Settings…").id("settings").build(app)?;
             let separator = tauri::menu::PredefinedMenuItem::separator(app)?;
-            let quit = MenuItemBuilder::new("Quit AI Cursor").id("quit").build(app)?;
+            let quit = MenuItemBuilder::new("Quit Magic Cursor").id("quit").build(app)?;
 
             let menu = MenuBuilder::new(app)
                 .items(&[&settings_item, &separator, &quit])
@@ -251,7 +251,7 @@ fn main() {
             let _tray = TrayIconBuilder::new()
                 .icon(app.default_window_icon().unwrap().clone())
                 .menu(&menu)
-                .tooltip("AI Cursor")
+                .tooltip("Magic Cursor")
                 .on_menu_event(|app, event| match event.id().as_ref() {
                     "settings" => {
                         if let Some(w) = app.get_webview_window("settings") {

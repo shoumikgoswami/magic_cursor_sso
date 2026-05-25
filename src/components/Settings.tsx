@@ -163,7 +163,7 @@ export function Settings() {
       {/* Title bar — drag region */}
       <div className={s.titleBar} data-tauri-drag-region>
         <span className={s.titleIcon}>⬡</span>
-        <span className={s.title}>AI Cursor — Settings</span>
+        <span className={s.title}>Magic Cursor — Settings</span>
         <button className={s.closeBtn} onClick={close} title="Close (Esc)">✕</button>
       </div>
 

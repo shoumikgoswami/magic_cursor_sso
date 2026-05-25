@@ -1,7 +1,7 @@
 {
-  "productName": "AI Cursor",
+  "productName": "Magic Cursor",
   "version": "0.1.0",
-  "identifier": "com.aicursor.app",
+  "identifier": "com.magiccursor.app",
   "build": {
     "frontendDist": "../dist",
     "devUrl": "http://localhost:5173",
@@ -13,7 +13,7 @@
     "windows": [
       {
         "label": "main",
-        "title": "AI Cursor",
+        "title": "Magic Cursor",
         "visible": false,
         "width": 1,
         "height": 1,
@@ -23,7 +23,7 @@
       },
       {
         "label": "overlay",
-        "title": "AI Cursor",
+        "title": "Magic Cursor",
         "visible": false,
         "width": 440,
         "height": 64,
@@ -36,7 +36,7 @@
       },
       {
         "label": "settings",
-        "title": "AI Cursor — Settings",
+        "title": "Magic Cursor — Settings",
         "visible": false,
         "width": 460,
         "height": 580,

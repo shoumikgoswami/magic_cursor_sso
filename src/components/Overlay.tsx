@@ -249,8 +249,8 @@ export function Overlay() {
               border: "none", color: "#fbbf24", cursor: "pointer", fontSize: 14 }}
           >✕</button>
           <div style={{ marginTop: 4 }}>
-            AI Cursor needs Accessibility access to detect mouse shakes.
-            Go to <strong>System Settings → Privacy &amp; Security → Accessibility</strong> and add AI Cursor, then relaunch.
+            Magic Cursor needs Accessibility access to detect mouse shakes.
+            Go to <strong>System Settings → Privacy &amp; Security → Accessibility</strong> and add Magic Cursor, then relaunch.
           </div>
         </div>
       )}

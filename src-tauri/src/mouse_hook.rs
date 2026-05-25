@@ -107,7 +107,7 @@ pub fn start(app: AppHandle, config: AppConfig) {
             }
         }) {
             let msg = format!("{:?}", e);
-            eprintln!("[AI Cursor] Mouse listener failed to start: {}", msg);
+            eprintln!("[Magic Cursor] Mouse listener failed to start: {}", msg);
             // On macOS the most common cause is missing Accessibility permission.
             // Emit the same event the pre-check emits so the frontend shows the banner.
             #[cfg(target_os = "macos")]
